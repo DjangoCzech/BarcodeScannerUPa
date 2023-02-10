@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.budiyev.android.codescanner.AutoFocusMode
 import com.budiyev.android.codescanner.CodeScanner
 import com.budiyev.android.codescanner.DecodeCallback
@@ -23,8 +24,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var barcodeList = mutableListOf(
+            Barcode("123456"),
+            Barcode("654321"),
+            Barcode("987654")
+        )
+        val adapter = BarcodeAdapter(barcodeList, this)
+        rv_recyclerView.adapter = adapter
+        rv_recyclerView.layoutManager = LinearLayoutManager(this)
+
         setupPermission()
         codeScanner()
+
+        tv_textView.text = "9999999"
+
+        btn_button.setOnClickListener {
+            barcodeList.add(Barcode(tv_textView.text.toString()))
+            adapter.notifyItemInserted(barcodeList.size - 1)
+        }
     }
 
     private fun codeScanner(){

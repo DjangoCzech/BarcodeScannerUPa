@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/japa0202/AndroidStudioProjects/BarcodeUPaNew/app/src/main/res/layout/activity_main.xml" value="0.371875" />
+        <entry key="..\:/Users/japa0202/AndroidStudioProjects/BarcodeUPaNew/app/src/main/res/layout/activity_main.xml" value="0.2558746736292428" />
+        <entry key="..\:/Users/japa0202/AndroidStudioProjects/BarcodeUPaNew/app/src/main/res/layout/activity_second.xml" value="0.67" />
+        <entry key="..\:/Users/japa0202/AndroidStudioProjects/BarcodeUPaNew/app/src/main/res/layout/item_todo.xml" value="0.371875" />
       </map>
     </option>
   </component>
